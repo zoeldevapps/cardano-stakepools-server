@@ -1,0 +1,61 @@
+{
+  "name": "cardano-stakepools-server",
+  "version": "0.1.0",
+  "description": "Service hosting cardano stakepool information",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "NODE_ENV=develop tsc-watch -b --onSuccess 'node -r source-map-support/register dist/app.js'",
+    "build": "tsc",
+    "lint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoeldevapps/cardano-stakepools-server.git"
+  },
+  "keywords": [
+    "cardano",
+    "stakepools",
+    "graphql",
+    "service"
+  ],
+  "author": "szist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoeldevapps/cardano-stakepools-server/issues"
+  },
+  "homepage": "https://github.com/zoeldevapps/cardano-stakepools-server#readme",
+  "dependencies": {
+    "@cardano-ogmios/client": "^5.5.7",
+    "@fastify/cors": "^8.1.1",
+    "@zoeldevapps/fastify-cors-envregex": "^1.0.2",
+    "axios": "^1.1.3",
+    "bech32": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.9.2",
+    "graphql": "^16.6.0",
+    "mercurius": "^10.5.0",
+    "mercurius-codegen": "^4.0.1",
+    "node-schedule": "^2.1.0",
+    "pino": "^8.6.1",
+    "rambdax": "^8.1.0",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.2",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/ini": "^1.3.31",
+    "@types/node": "^18.11.0",
+    "@types/node-schedule": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "pino-pretty": "^9.1.1",
+    "prettier": "^2.7.1",
+    "source-map-support": "^0.5.21",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.8.4"
+  }
+}
